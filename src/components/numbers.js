@@ -50,19 +50,49 @@ const Numbers = ({ selectedNumbers, setSelectedNumbers, totalPrice, setTotalPric
 
   return (
     <div className="numbers-content">
-      {dividedNumbers.map((row, index) => (
-        <div key={index} className={`row-numbers row-${index + 1}`}>
-          {row.map((number) => (
+        <div className="row-numbers row-1">
+            {dividedNumbers[0].map((number) => (
             <button
-              key={number}
-              className={selectedNumbers.includes(number) ? "number-button selected" : "number-button"}
-              onClick={() => handleNumberClick(number)}
+                className={selectedNumbers.includes(number) ? "number-button selected" : "number-button"}
+                onClick={() => handleNumberClick(number)}
             >
-              {number}
+                {number}
             </button>
-          ))}
+            ))}
         </div>
-      ))}
+
+        <div className="row-numbers row-2">
+            {dividedNumbers[1].map((number) => (
+            <button
+                className={selectedNumbers.includes(number) ? "number-button selected" : "number-button"}
+                onClick={() => handleNumberClick(number)}
+            >
+                {number}
+            </button>
+            ))}
+        </div>
+
+        <div className="row-numbers row-3">
+            {dividedNumbers[2].map((number) => (
+            <button
+                className={selectedNumbers.includes(number) ? "number-button selected" : "number-button"}
+                onClick={() => handleNumberClick(number)}
+            >
+                {number}
+            </button>
+            ))}
+        </div>
+
+        <div className="row-numbers row-4">
+            {dividedNumbers[3].map((number) => (
+            <button
+                className={selectedNumbers.includes(number) ? "number-button selected" : "number-button"}
+                onClick={() => handleNumberClick(number)}
+            >
+                {number}
+            </button>
+            ))}
+        </div>
       <div className="buttons-row">
         <button className="out-button" onClick={handleCash}>Cash</button>
         <button className="out-button" onClick={handleClear}>Clear</button>

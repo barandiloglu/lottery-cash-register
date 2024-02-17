@@ -11,7 +11,7 @@ const Table = ({ selectedNumbers, totalPrice }) => {
       <div className="table">
         Numbers Selected:
         {selectedNumbers.map((number, index) => (
-          <span key={index}>Mark: {number}</span>
+          <span >Mark: {number}</span>
         ))}
       </div>
 
